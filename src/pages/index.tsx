@@ -1,10 +1,10 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
 type Props = {
-  title: string
-}
+  title: string;
+};
 
-export default function Home({ title = 'React Avançado' }:Props) {
+const Home: React.FC<Props> = ({ title = 'React Avançado' }) => {
   return (
     <div>
       <Head>
@@ -18,5 +18,7 @@ export default function Home({ title = 'React Avançado' }:Props) {
         </h1>
       </main>
     </div>
-  )
-}
+  );
+};
+
+export default Home;
