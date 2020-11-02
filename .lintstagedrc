@@ -1,5 +1,6 @@
 {
   "src/**/*": [
-    "yarn lint --fix"
+    "yarn lint --fix",
+    "cross-env CI=true yarn test --bail --findRelatedTests"
   ]
 }

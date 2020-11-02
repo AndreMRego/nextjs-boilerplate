@@ -1,24 +1,7 @@
-import Head from 'next/head';
+import Main from '../components/Main';
 
-type Props = {
-  title: string;
-};
-
-const Home: React.FC<Props> = ({ title = 'React Avançado' }) => {
-  return (
-    <div>
-      <Head>
-        <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1>
-          Welcome to <a href="https://nextjs.org">{title}!</a>
-        </h1>
-      </main>
-    </div>
-  );
+const Home = () => {
+  return <Main />;
 };
 
 export default Home;
