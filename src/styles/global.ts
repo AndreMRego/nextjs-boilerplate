@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
  * {
@@ -12,13 +12,16 @@ const GlobalStyles = createGlobalStyle`
     font-size: 62.5%;
   }
 
-  html, body, #__next {
-    height: 100%;
-  }
+  ${({ theme }) => css`
+    html {
+      font-size: 62.5%;
+    }
 
-  body {
-    font: 16px 'Roboto Slab', serif;
-  }
+    body {
+      font-family: ${theme.font.family};
+      font-size: ${theme.font.sizes.medium};
+    }
+  `}
 
 `;
 
