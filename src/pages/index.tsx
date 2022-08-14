@@ -1,7 +1,11 @@
-import Main from '../components/Main';
+import { Button } from '../components';
 
 const Home = () => {
-  return <Main />;
+  const handleClick = () => {
+    console.log('click');
+  };
+
+  return <Button handleClick={handleClick}>Hello</Button>;
 };
 
 export default Home;

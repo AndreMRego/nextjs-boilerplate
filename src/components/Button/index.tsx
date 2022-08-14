@@ -10,4 +10,4 @@ const Button = ({ children, handleClick }: ButtonProps) => (
   <S.Wrapper onClick={handleClick}>{children}</S.Wrapper>
 );
 
-export default Button;
+export { Button };

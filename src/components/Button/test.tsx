@@ -3,7 +3,7 @@ import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { renderWithTheme } from 'utils/tests/helpers';
 
-import Button from '.';
+import { Button } from '.';
 
 const handleClick = jest.fn();
 
