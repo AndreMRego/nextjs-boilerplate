@@ -1,10 +1,17 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import Button from '.';
+import { Button, ButtonProps } from '.';
 
 export default {
   title: 'Button',
   component: Button,
-} as Meta;
+} as Meta<ButtonProps>;
 
-export const Basic: Story = (args) => <Button {...args} />;
+export const Basic: Story<ButtonProps> = (args) => (
+  <Button {...args}>{args.children}</Button>
+);
+
+Basic.args = {
+  handleClick: () => null,
+  children: 'cancel',
+};
