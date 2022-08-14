@@ -1,9 +1,13 @@
+import { ReactNode } from 'react';
 import * as S from './styles';
 
-const Button = () => (
-  <S.Wrapper>
-    <h1>Button</h1>
-  </S.Wrapper>
+export type ButtonProps = {
+  children: ReactNode;
+  handleClick: () => void;
+};
+
+const Button = ({ children, handleClick }: ButtonProps) => (
+  <S.Wrapper onClick={handleClick}>{children}</S.Wrapper>
 );
 
 export default Button;
